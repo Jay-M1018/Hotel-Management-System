@@ -63,7 +63,7 @@ public class HotelManagementSystem extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		setVisible(false);
-		// new Login();
+		new Login();
 		
 	}
 
