@@ -35,6 +35,7 @@ public class Login extends JFrame implements ActionListener{
 		
 		login = new JButton("Login");
 		login.setBounds(40,150,124,30);
+		login.addActionListener(this);
 		login.setBackground(Color.BLACK);
 		login.setForeground(Color.WHITE);
 		
@@ -42,6 +43,7 @@ public class Login extends JFrame implements ActionListener{
 		
 		cancel = new JButton("Cancel");
 		cancel.setBounds(180,150,124,30);
+		cancel.addActionListener(this);
 		cancel.setBackground(Color.BLACK);
 		cancel.setForeground(Color.WHITE);
 		
