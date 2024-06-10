@@ -2,6 +2,7 @@ package System;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
 
 import javax.swing.*;
 public class AddEmployee extends JFrame{
@@ -81,6 +82,20 @@ public class AddEmployee extends JFrame{
     JTextField tfemail = new JTextField();
     tfemail.setBounds(200,330,150,30);
     add(tfemail);
+
+    JButton submit = new JButton("SUBMIT");
+    submit.setBackground(Color.BLACK);
+    submit.setForeground(Color.WHITE);
+    submit.setBounds(200,430,150,30);
+    add(submit);
+
+    ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Images/tenth.jpg"));
+    Image i2 = i1.getImage().getScaledInstance(450,450,Image.SCALE_DEFAULT);
+    ImageIcon i3 = new ImageIcon(i2);
+    JLabel image = new JLabel(i3);
+    image.setBounds(380,60,450,370);
+    add(image);
+
 
 
 		
