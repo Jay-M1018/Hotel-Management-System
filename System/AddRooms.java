@@ -99,7 +99,7 @@ public class AddRooms extends JFrame implements ActionListener{
     add(image);
 
 
-    setBounds(230,150,940,470);
+    setBounds(230,160,940,470);
     setVisible(true);
   }
   public static void main(String[] args) {
