@@ -2,8 +2,10 @@ package System;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Dashboard extends JFrame{
+public class Dashboard extends JFrame implements ActionListener{
 	
 	Dashboard(){
 		setBounds(0,0,1370,735);
@@ -38,12 +40,15 @@ public class Dashboard extends JFrame{
 		mb.add(admin);
 		
 		JMenuItem addEmployes = new JMenuItem("ADD EMPLOYEE");
+		addEmployes.addActionListener(this);
 		admin.add(addEmployes);
 		
 		JMenuItem addRooms = new JMenuItem("ADD ROOMS");
+		addRooms.addActionListener(this);
 		admin.add(addRooms);
 		
 		JMenuItem addDrivers = new JMenuItem("ADD DRIVERS");
+		addDrivers.addActionListener(this);
 		admin.add(addDrivers);
 		
 		
@@ -52,6 +57,16 @@ public class Dashboard extends JFrame{
 	public static void main(String[] args) {
 		new Dashboard();
 
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getActionCommand().equals("ADD EMPLOYEE")){
+			new AddEmployee();
+		}else if(e.getActionCommand().equals("ADD ROOMS")){
+			new AddRooms();
+		}else if(e.getActionCommand().equals("ADD DRIVERS")){
+			new AddDriver();
+		}
 	}
 
 }
