@@ -61,7 +61,7 @@ public class AddEmployee extends JFrame implements ActionListener{
     lbljob.setFont(new Font("Tahoma",Font.PLAIN,17));
     add(lbljob);
 
-    String str[] = {"Front Desk Clerk", "Porters","Housekeeping","Kitchen Staff", "Room Service","Chefs","Waiters/Waitress","Manager","Accountant"};
+    String str[] = {"Front Desk Clerk", "Porter","Housekeeping","Kitchen Staff", "Room Service","Chef","Waiters/Waitress","Manager","Accountant"};
     cbjob = new JComboBox(str);
     cbjob.setBounds(200,180,150,30);
     cbjob.setBackground(Color.WHITE);
