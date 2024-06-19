@@ -9,7 +9,8 @@ import java.awt.event.*;
 import java.awt.*;
 
 public class Reception extends JFrame implements ActionListener{
-  JButton newCustomer,rooms,department,allEmployee,managerInfo,customers,searchRoom,update;
+  JButton newCustomer,rooms,department,allEmployee,managerInfo,customers,searchRoom,update,roomStatus,
+  pickup,checkout,logout;
   Reception(){
     getContentPane().setBackground(Color.WHITE);
     setLayout(null);
@@ -56,10 +57,11 @@ public class Reception extends JFrame implements ActionListener{
     managerInfo.addActionListener(this);
     add(managerInfo);
 
-    JButton checkout = new JButton("Checkout");
+    checkout = new JButton("Checkout");
     checkout.setBounds(10,270,200,30);
     checkout.setBackground(Color.BLACK);
     checkout.setForeground(Color.WHITE);
+    checkout.addActionListener(this);
     add(checkout);
 
     update = new JButton("Update Status");
@@ -69,16 +71,18 @@ public class Reception extends JFrame implements ActionListener{
     update.addActionListener(this);
     add(update);
 
-    JButton roomStatus = new JButton("Update Room Status");
+    roomStatus = new JButton("Update Room Status");
     roomStatus.setBounds(10,350,200,30);
     roomStatus.setBackground(Color.BLACK);
     roomStatus.setForeground(Color.WHITE);
+    roomStatus.addActionListener(this);
     add(roomStatus);
 
-    JButton pickup = new JButton("Pickup Service");
+    pickup = new JButton("Pickup Service");
     pickup.setBounds(10,390,200,30);
     pickup.setBackground(Color.BLACK);
     pickup.setForeground(Color.WHITE);
+    pickup.addActionListener(this);
     add(pickup);
 
     searchRoom = new JButton("Search Room");
@@ -88,10 +92,11 @@ public class Reception extends JFrame implements ActionListener{
     searchRoom.addActionListener(this);
     add(searchRoom);
 
-    JButton logout = new JButton("Logout");
+    logout = new JButton("Logout");
     logout.setBounds(10,470,200,30);
     logout.setBackground(Color.BLACK);
     logout.setForeground(Color.WHITE);
+    logout.addActionListener(this);
     add(logout);
 
     ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Images/fourth.jpg"));
@@ -137,6 +142,18 @@ public class Reception extends JFrame implements ActionListener{
     }else if(e.getSource() == update){
       setVisible(false);
       new UpdateCheck();
+    }else if(e.getSource() == roomStatus){
+      setVisible(false);
+      new UpdateRoom();
+    }else if(e.getSource() == pickup){
+      setVisible(false);
+      new Pickup();
+    }else if(e.getSource() == checkout){
+      setVisible(false);
+      new Checkout();
+    }else if(e.getSource() == logout){
+      setVisible(false);
+      System.exit(0);
     }
   }
 }
