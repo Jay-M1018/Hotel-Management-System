@@ -1,5 +1,6 @@
 package System;
 
+import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -75,6 +76,10 @@ public class AddCustomer extends JFrame implements ActionListener{
     rfemale.setBackground(Color.WHITE);
     rfemale.setBounds(270,200,100,25);
     add(rfemale);
+
+    ButtonGroup bg = new ButtonGroup();
+    bg.add(rmale);
+    bg.add(rfemale);
 
     JLabel lblcountry = new JLabel("Country");
     lblcountry.setBounds(35,240,100,20);
